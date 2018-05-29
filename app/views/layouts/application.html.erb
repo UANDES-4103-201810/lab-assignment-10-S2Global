@@ -5,8 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <button type="button" style="float: right">Log Out</button>
-    <button type="button" style="float: right">Log In</button>
+    <%= button_to "Log In", new_user_session_path, style="float: right" %>
+    <button_to type="button" style="float: right">Log In</button_to>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
