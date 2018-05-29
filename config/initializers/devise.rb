@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-config.mailersender='mailer@example.com'
+config.mailer_sender='fcoalvarez91@gmail.com'
 config.omniauth :facebook, "733102407080915", "08c2dc26126e9526c789f71c4a296bdd"
 
 # Use this hook to configure devise mailer, warden hooks and so forth.
