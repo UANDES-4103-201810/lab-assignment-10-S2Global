@@ -5,8 +5,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= button_to "Log In", new_user_session_path, style="float: right" %>
-    <button_to type="button" style="float: right">Log In</button_to>
+    <% if user_signed_in? %>
+      <h2><%= current_user.name %></h2>
+      <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to "Log In", new_user_session_path %>
+    <% end %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
